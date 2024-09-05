@@ -31,17 +31,18 @@
         case 0:
             document.write(",  é par")
             break
-        case 1:
+        default:
             document.write(",  é impar")
             break
     } 
-    const int = Number.isInteger(conta())
+    const resutaldo = conta()
+    const int = Number.isInteger(resutaldo)
     switch (int){
         case true: 
-            document.write(", é decimal")
+            document.write(", é inteiro")
             break
         default:
-            document.write(", é inteiro")
+            document.write(", é decimal")
             break
     }
     const maiorque = conta() > 0
