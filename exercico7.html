@@ -6,17 +6,60 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
-    const hemisfero = prompt("qual hemisferio voce esta (norte,sul,)").toUpperCase()
-    const mes = prompt("qual mes esta? (1,2,3,4,5,6,7,8,9,10,11,12)")
-    
-    //PROCESSAMENTO
+    //ENTRADA-
+    const hemisfero = prompt("qual hemisferio voce esta (norte, sul)").toUpperCase();
+    const mes = parseInt(prompt("qual mes esta? (1-12)"));
+
     const resposta = () => {
-        switch(hemisfero){
-            case "SUL":
-                case 
+    switch (hemisfero) {
+        case "SUL": 
+            switch (mes) {
+                case 4:
+                case 5:
+                case 6:
+                    return "voce esta no Outono";
+                case 7:
+                case 8:
+                case 9: 
+                    return "voce esta no Inverno";
+                case 10:
+                case 11:
+                case 12:
+                    return "voce esta na Primavera";
+                case 1:
+                case 2:
+                case 3: 
+                    return "voce esta no Verão";
+                default:
+                    return "Mês inválido";
+            }
+        case "NORTE":
+            switch (mes) {
+                case 12:
+                case 1:
+                case 2:
+                    return "voce esta no inverno"
+                case 3:
+                case 4: 
+                case 5:
+                    return "voce esta na primavera"
+                case 6:
+                case 7: 
+                case 8: 
+                    return "voce esta no verao "
+                case 9: 
+                case 10: 
+                case 11:
+                    return "voce esta no outono"
+                default:
+                    return "Mês inválido";
         }
+            default:
+            return "Hemisfério inválido";
+      }
     }
+
+    document.write(resposta());
 
     //SAÍDA
 
